@@ -1,0 +1,12 @@
+2021-06-03 22:35:24,470 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:48:37,864 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:48:49,355 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:48:57,382 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:49:14,719 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:57:18,888 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:57:19,346 django.request WARNING  Not Found: /favicon.ico
+2021-06-03 22:57:29,879 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:59:26,247 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 22:59:32,794 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
+2021-06-03 23:16:22,667 django.request WARNING  Not Found: /favicon.ico
+2021-06-03 23:20:43,120 django.request WARNING  Not Found: /favicon.ico
