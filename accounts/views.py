@@ -66,7 +66,10 @@ def signup_view(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            form.save()
+            task = multiprocessing.Process(target=send_mail_to_user_from_form, args=(request, form,))
+            email_queue.append(task)
+            task.start()
+            task.join()
             return redirect('activation_sent')
     else:
         form = SignUpForm()
@@ -78,10 +81,9 @@ def user_login(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            print(cd)
             user = authenticate(username=cd['username'], password=cd['password'])
             if user is not None:
-                if True:
+                if user.is_active:
                     login(request, user)
                     return HttpResponse('Authenticated successfully')
                 else:

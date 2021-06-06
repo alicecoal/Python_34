@@ -18,12 +18,13 @@ class Profile(models.Model):
     age = models.IntegerField(default=18)
     level = models.IntegerField(default=0)
     country = CountryField(max_length=2, default="BY")
-    signup_confirmation = models.BooleanField(default=True)
+    signup_confirmation = models.BooleanField(default=False)
     is_seller = models.BooleanField(default=False)
     last_login = models.DateTimeField(default=datetime.now, blank=True)
 
     USERNAME_FIELD = 'user'
     REQUIRED_FIELDS = ('email',)
+    SOCIAL_AUTH_USER_FIELDS = ['username', 'email', 'role']
 
     def __str__(self):
         return self.user.username

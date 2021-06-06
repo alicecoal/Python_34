@@ -20,12 +20,14 @@ from django.conf.urls.static import static
 
 from ZZShop import settings
 from accounts import views
-from accounts.views import home_view, signup_view, activation_sent_view, activate
+from accounts.views import home_view, signup_view,  activate, activation_sent_view
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),  # админкая страничка
     path('', home_view, name="index"),  # index
     path('signup/', signup_view, name="signup"),  # страничка регистрации
+    path('sent/', activation_sent_view, name="activation_sent"),
+    path('activate/<slug:uidb64>/<slug:token>/', activate, name='activate'),
     url(r'^account/', include('accounts.urls')),  # для аккаунтов
     path('shop/', include(('shop.urls', 'shop'), namespace="shop")),  # для магазинов
     path('wallet/', include('wallets.urls')),  # для кошельков
