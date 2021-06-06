@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2021-06-03 22:35:24,470 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
 2021-06-03 22:48:37,864 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
 2021-06-03 22:48:49,355 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
@@ -11,3 +12,73 @@
 2021-06-03 23:16:22,667 django.request WARNING  Not Found: /favicon.ico
 2021-06-03 23:20:43,120 django.request WARNING  Not Found: /favicon.ico
 2021-06-06 10:51:12,128 django.request WARNING  Not Found: /favicon.ico
+=======
+2021-06-04 00:03:54,416 django.request WARNING  Not Found: /account/privacy-policy.html
+2021-06-04 00:03:54,417 django.server WARNING  "GET /account/privacy-policy.html HTTP/1.1" 404 3532
+2021-06-04 00:03:54,539 django.request WARNING  Not Found: /favicon.ico
+2021-06-04 00:03:54,541 django.server WARNING  "GET /favicon.ico HTTP/1.1" 404 3061
+2021-06-04 00:04:00,303 django.request WARNING  Not Found: /account/terms-conditions.html
+2021-06-04 00:04:00,304 django.server WARNING  "GET /account/terms-conditions.html HTTP/1.1" 404 3538
+2021-06-04 00:04:00,412 django.request WARNING  Not Found: /favicon.ico
+2021-06-04 00:04:00,413 django.server WARNING  "GET /favicon.ico HTTP/1.1" 404 3061
+2021-06-04 00:07:01,521 django.request WARNING  Not Found: /terms-conditions.html
+2021-06-04 00:07:01,522 django.server WARNING  "GET /terms-conditions.html HTTP/1.1" 404 3091
+2021-06-04 00:07:01,650 django.request WARNING  Not Found: /favicon.ico
+2021-06-04 00:07:01,651 django.server WARNING  "GET /favicon.ico HTTP/1.1" 404 3061
+2021-06-04 00:07:34,767 django.request WARNING  Not Found: /privacy-policy.html
+2021-06-04 00:07:34,768 django.server WARNING  "GET /privacy-policy.html HTTP/1.1" 404 3085
+2021-06-04 00:07:35,062 django.request WARNING  Not Found: /favicon.ico
+2021-06-04 00:11:25,858 django.request WARNING  Not Found: /privacy-policy.html
+2021-06-04 00:11:25,859 django.server WARNING  "GET /privacy-policy.html HTTP/1.1" 404 2679
+2021-06-04 00:11:26,008 django.request WARNING  Not Found: /favicon.ico
+2021-06-04 00:33:54,289 django.request ERROR    Internal Server Error: /account/login/
+Traceback (most recent call last):
+  File "/home/ann/.local/lib/python3.8/site-packages/django/urls/base.py", line 72, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'social'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ann/.local/lib/python3.8/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/core/handlers/base.py", line 143, in _get_response
+    response = response.render()
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 936, in render
+    bit = node.render_annotated(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/base.py", line 903, in render_annotated
+    return self.render(context)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/template/defaulttags.py", line 443, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ann/.local/lib/python3.8/site-packages/django/urls/base.py", line 83, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'social' is not a registered namespace
+2021-06-04 00:33:54,329 django.server ERROR    "GET /account/login/ HTTP/1.1" 500 168021
+2021-06-04 00:33:55,170 django.request WARNING  Not Found: /favicon.ico
+>>>>>>> d59deaac0a29e16678e0f5085c7249507fedb27e
