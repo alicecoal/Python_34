@@ -10,3 +10,4 @@
 2021-06-03 22:59:32,794 django.server WARNING  "GET /static/images/header-iphone.png HTTP/1.1" 404 1698
 2021-06-03 23:16:22,667 django.request WARNING  Not Found: /favicon.ico
 2021-06-03 23:20:43,120 django.request WARNING  Not Found: /favicon.ico
+2021-06-06 10:51:12,128 django.request WARNING  Not Found: /favicon.ico

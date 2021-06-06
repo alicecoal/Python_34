@@ -33,7 +33,7 @@
     <link href="/static/css/style.css" rel="stylesheet">
 	
 	<!-- Favicon  -->
-
+    <link rel="icon" href="/static/images/favicon.png">
 
 
     <!-- Scroll -->
@@ -101,10 +101,6 @@
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
-
-                <li class="nav-item">
-                    <a class="a-menu nav-link page-scroll " href="#contact">CONTACT</a>
-                </li>
             </ul>
         </div>
     </nav> <!-- end of navbar -->
@@ -113,14 +109,18 @@
 
     <!-- Header -->
     <header id="header" class="header">
-        <div class="header-content">add
+        <div class="header-content">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
                             <h1>BEST SHOP WITH <br>FENCES, FURNITURE, PAINTINGS, COVERAGE</h1>
                             <p class="p-large">Welcome in IKEA2.0 !</p>
+                            {% if request.user.is_authenticated %}
+                            <a class="btn-solid-lg page-scroll" href="{% url "logout" %}">LOGOUT</a>
+                            {% else %}
                             <a class="btn-solid-lg page-scroll" href="{% url "signup" %}">REGISTER</a>
                             <a class="btn-solid-lg page-scroll" href="{% url "login" %}">LOGIN</a>
+                            {% endif %}
                         </div>
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
@@ -161,7 +161,7 @@
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
+                                <div class="media-body">There are no Terms & ConditionsRead or Privacy Policy yet, lol</div>
                             </li>
                         </ul>
                     </div>
