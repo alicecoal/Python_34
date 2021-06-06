@@ -5,5 +5,7 @@
 .idea/misc.xml
 .idea/modules.xml
 .idea/vcs.xml
-.idea/
+.idea/ZZShop-master.iml
+.idea/jsLibraryMappings.xml
+.idea/watcherTasks.xml
 venv/include/
